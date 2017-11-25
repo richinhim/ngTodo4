@@ -26,4 +26,7 @@ export class ViewComponent implements OnInit {
     );
   }
 
+  gotoModify(news_id: number) {
+    this.router.navigateByUrl(`/admin/news/modify/${news_id}`);
+  }
 }
