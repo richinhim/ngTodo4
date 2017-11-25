@@ -15,6 +15,7 @@ import { ViewComponent } from './news/view/view.component';
 import { WriteComponent } from './news/write/write.component';
 import {CKEditorModule} from "ng2-ckeditor";
 import {FormsModule} from "@angular/forms";
+import { ModifyComponent } from './news/modify/modify.component';
 
 @NgModule({
   imports: [
@@ -33,7 +34,7 @@ import {FormsModule} from "@angular/forms";
     MatSnackBarModule,
     CKEditorModule,
   ],
-  declarations: [AdminComponent, HomeComponent, NewsComponent, ViewComponent, WriteComponent],
+  declarations: [AdminComponent, HomeComponent, NewsComponent, ViewComponent, WriteComponent, ModifyComponent],
   providers: [AdminService]
 })
 export class AdminModule { }

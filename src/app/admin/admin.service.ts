@@ -37,4 +37,8 @@ export class AdminService {
     return this.http.post(this.SERVER + '/api/imageUpload', formData, {headers: headers});
   }
 
+  modifyNews(params: NewsVO) {
+    return this.http.put(this.SERVER + `/api/news`, params,
+      {headers: this.headers});
+  }
 }

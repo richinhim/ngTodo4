@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {AdminService} from "../../admin.service";
 import {NewsVO} from "../../../domain/news.vo";
 
@@ -12,7 +12,8 @@ import {NewsVO} from "../../../domain/news.vo";
 export class ViewComponent implements OnInit {
   news: NewsVO;
 
-  constructor(private route: ActivatedRoute, private adminService: AdminService) { }
+  constructor(private route: ActivatedRoute, private adminService: AdminService,
+              private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
